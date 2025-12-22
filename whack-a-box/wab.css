@@ -1,0 +1,162 @@
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: linear-gradient(135deg, #4b4848 0%, #1c116d 100%);
+  color: #333;
+}
+
+h1 {
+ background: linear-gradient(
+    90deg,
+    #678989,
+    #1f669d
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-shadow: 0 6px 25px rgba(255,255,255,0.25);}
+
+#game-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 80px);
+  gap: 10px;
+  justify-content: center;
+  margin: 20px 0;
+  padding: 120px;
+}
+
+.box {
+  width: 80px;
+  height: 80px;
+  background-color: #dfebf2;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.active {
+  background-color: #0288d1;
+}
+
+.hide{
+    display: none;
+}
+
+.top {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: rgb(234, 227, 227);
+  height: 80px;
+}
+
+.home {
+  margin-right: auto;
+  padding: 8px 16px;
+
+  border-radius: 8px;
+  border: 2px solid black;
+
+  background: linear-gradient(135deg, #e0f2f1, #8a85e7);
+  cursor: pointer;
+
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+  transition: all 0.25s ease;}
+  
+
+  .home:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #b8e0c9, #9ca1df);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.35);
+}
+
+
+.title {
+  justify-self: center;
+  margin: 0;
+}
+
+
+
+#start{
+    margin-top: 30px ;    
+  margin-bottom: 30px ;      
+  padding: 12px 30px;     
+
+  border-radius: 10px;
+  border: none;
+
+  cursor: pointer;
+}
+
+#start:hover{
+    transform: translateY(-3px) scale(1.05);
+     background: linear-gradient(135deg, #fbefef 0%, #9f9ca8 100%);
+
+}
+
+#reset {
+  margin-top: 30px ;     
+  margin-bottom: 30px ;     
+  padding: 12px 30px;     
+
+  border-radius: 10px;
+  border: none;
+
+  cursor: pointer;
+}
+
+
+#reset:hover{
+     transform: translateY(-3px) scale(1.05);
+     background: linear-gradient(135deg, #fbefef 0%, #9f9ca8 100%);
+
+
+}
+
+#scoreList{
+    display: flex;
+    width: 100;
+    text-align: center;
+    left: 50%;
+    justify-content: center;
+    width: 180px;
+    border: 2px solid black;
+    margin: auto;
+    background-color: #5fb7df;
+}
+
+.btns {
+  display: flex;
+  justify-content: center; /* center horizontally */
+  align-items: center;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+@media (max-width: 768px) {
+  .btns {
+    flex-direction: column; /* stack buttons */
+    gap: 10px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .btns {
+    gap: 20px;
+  }
+}
+
+

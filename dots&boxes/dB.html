@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dots and Boxes</title>
+    <link rel="stylesheet" href="dB.css">
+</head>
+<body>
+    <div class="top-bar">
+         <button class="home-btn" onclick="window.location.href='../index.html'">
+        Go to Home
+        </button>
+        <h1>Dots & Boxes</h1>
+    </div>
+    
+
+    <div class="container">
+        
+        <div class="scoreboard">
+            <div class="player player1 active" id="player1">
+                Player 1: <span id="score1">0</span>
+            </div>
+            <div class="player player2" id="player2">
+                Player 2: <span id="score2">0</span>
+            </div>
+        </div>
+
+        <div class="game-board">
+            <div class="grid" id="grid"></div>
+        </div>
+
+        <div class="winner" id="winner"></div>
+        
+        <button class="reset-btn" id="resetBtn">New Game</button>
+    </div>
+
+    <script src="dB.js"></script>
+</body>
+</html>

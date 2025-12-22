@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, GREY 0%, BLACK 100%);
+    padding: 20px;
+}
+
+.container {
+    background: rgb(48, 47, 47);
+    padding: 70px;
+    border-radius: 10px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+
+.top-bar {
+    background-color: rgb(14, 12, 12);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:100px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 20px;
+    z-index: 100;
+}
+
+.top-bar h1 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    background: linear-gradient(
+    90deg,
+    #678989,
+    #1f669d
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+    
+
+    color: rgb(225, 218, 218);
+    font-size: 28px;
+    font-weight: bold;
+}
+
+
+.home-btn {
+  margin-right: auto;
+  padding: 8px 16px;
+
+  border-radius: 8px;
+  border: 2px solid black;
+
+  background: linear-gradient(135deg, #e0f2f1, #454f49);
+  cursor: pointer;
+
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+  transition: all 0.25s ease;}
+
+
+
+.home-btn:hover {
+    background: white;
+    transform: translateY(-2px);
+
+    
+}
+
+
+.scoreboard {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    gap:20px;
+}
+
+.player {
+    padding: 15px 25px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.player1 {
+    background: #ff6b6b;
+    color: white;
+}
+
+.player2 {
+    background: #4ecdc4;
+    color: white;
+}
+
+.player.active {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.game-board {
+    display: inline-block;
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.grid {
+    display: grid;
+    gap: 0;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background: #333;
+    border-radius: 50%;
+    position: relative;
+}
+
+.h-line, .v-line {
+    background: #ddd;
+    cursor: pointer;
+}
+
+.h-line {
+    height: 4px;
+    width: 50px;
+}
+
+.v-line {
+    width: 4px;
+    height: 50px;
+}
+
+.h-line:hover, .v-line:hover {
+    background: #242222;
+}
+
+.h-line.filled, .v-line.filled {
+    cursor: not-allowed;
+}
+
+.h-line.filled.p1, .v-line.filled.p1 {
+    background: #ff6b6b;
+}
+
+.h-line.filled.p2, .v-line.filled.p2 {
+    background: #4ecdc4;
+}
+
+.box {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.box.p1 {
+    background: rgba(255, 107, 107, 0.3);
+    color: #ff6b6b;
+}
+
+.box.p2 {
+    background: rgba(78, 205, 196, 0.3);
+    color: #4ecdc4;
+}
+
+.winner {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #667eea;
+    display: none;
+}
+
+.winner.show {
+    display: block;
+    animation: celebrate 0.5s ease-in-out;
+}
+
+@keyframes celebrate {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.reset-btn {
+    display: block;
+    margin: 20px auto 0;
+    padding: 12px 30px;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.reset-btn:hover {
+    background: #764ba2;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
