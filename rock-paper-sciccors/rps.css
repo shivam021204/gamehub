@@ -4,7 +4,7 @@
 }
 
 html, body {
-  height: 100%;
+  min-height: 100%;
   margin: 0;
 }
 
@@ -13,20 +13,10 @@ body {
   text-align: center;
   
 
-  background: linear-gradient(135deg, #cad7cc 0%,#515451 50%, #010b02 100%);
+  background: linear-gradient(135deg, #464a46 0%,#515451 50%, #010b02 100%);
   color: #1f2d23;
 }
 
-
-h1 {
-  padding: 20px;
-  font-size: 490px;
-  color: black;
-  margin:0;
-  text-align: center;
-  
-  
-}
 
 .choices {
   margin: 60px;
@@ -118,21 +108,13 @@ h1 {
   position: relative;
   display: flex;
   align-items: center;
-  height:80px;
+  height:70px;
 
   padding: 20px 40px;
 
-  background: linear-gradient(
-    135deg,
-    rgba(223, 229, 223, 0.85),
-    rgba(190, 210, 190, 0.75)
-  );
+  background: rgb(21, 20, 20)
 
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-
-  border-bottom: 2px solid rgb(24, 22, 22);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  
 }
 
 
@@ -162,10 +144,10 @@ h1 {
   left: 50%;
   transform: translateX(-50%);
 
-  font-size: 30px;
-  font-weight: 800;
+  font-size: 40px;
+  font-weight: 510;
 
-  background: linear-gradient(90deg, #2f4f37, #000);
+  background: linear-gradient(90deg, #779e81, #165619);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
@@ -198,5 +180,14 @@ h1 {
 }
 
 #computer-choice{
-  color: maroon;
+  color: rgb(249, 6, 6);
+}
+
+
+
+h3{
+  font-size: 25px;
+  color: white;
+  padding: 10px;
+  margin-bottom: 40px;
 }
